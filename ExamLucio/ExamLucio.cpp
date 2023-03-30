@@ -18,6 +18,26 @@ int askNumber(string question, int high, int low)
     return number;
 }
 
+void ExitFunc() {
+    cout << endl << "Seguro que quiere salir?" << endl;
+    cout << "1. Salir" << endl << "2. Regresar" << endl << endl;
+    cin >> SalirConfirm;
+
+    system("clear");
+
+    if (SalirConfirm == 1)
+    {
+        cout << endl << "Saliendo del programa...";
+    }
+    else if (SalirConfirm == 2) {
+
+    }
+    else {
+        cout << endl << "Escoja una opcion valida." << endl << endl;
+
+    }
+}
+
 void JuegoRango()
 {
     int SalirDelJuego = 0;
@@ -36,11 +56,10 @@ void JuegoRango()
         cin >> menor;
         cout << endl << "Ingrese el rango mayor:" << endl;
         cin >> mayor;
-    
+
         if (menor < mayor) {
             do {
                 secretNumber = (randomNumber % ((mayor + 1) - menor)) + menor;
-                cout << secretNumber;
                 guess = askNumber("\nIngresa un numero\n", mayor, menor);
 
                 tries++;
@@ -65,35 +84,36 @@ void JuegoRango()
                     cout << "1. Intentar otra vez." << endl << "2. Salir del programa." << endl << endl;
                     cin >> SalirDelJuego;
 
+                    system("clear");
+
                     if (SalirDelJuego == 1)
                     {
                         JuegoRango();
                     }
                     else if (SalirDelJuego == 2) {
-                        cout << endl << "Saliendo del programa..." << endl << endl;
-                        exit(0);
+                        ExitFunc();
                     }
                     else {
                         cout << endl << "Escoja una opcion valida." << endl;
-                        exit(0);
+                        system("pause");
                     }
 
                 }
 
-            } while (guess != secretNumber && SalirDelJuego != 2);
+            } while (guess != secretNumber && SalirDelJuego != 1);
 
             break;
 
         }
         else {
+            system("clear");
             JuegoRango();
         }
 
     } while (menor < mayor);
 
-
-
 }
+
 
 int main()
 {
@@ -107,26 +127,10 @@ int main()
             JuegoRango();
         }
         else if (JugarSalir == 2) {
-            cout << endl << "Seguro que quiere salir?" << endl;
-            cout << "1. Salir" << endl << "2. Regresar" << endl << endl;
-            cin >> SalirConfirm;
-
-            if (SalirConfirm == 1)
-            {
-                cout << endl << "Saliendo del programa...";
-            }
-            else if (SalirConfirm == 2) {
-               
-            }
-            else {
-                cout << endl << "Escoja una opcion valida." << endl << endl;
-                
-            }
+            ExitFunc();
         }
         else {
             cout << endl << "Escoja una opcion valida." << endl << endl;
         }
-    } while (SalirConfirm != 1); 
+    } while (SalirConfirm != 1);
 }
-
-
