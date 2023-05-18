@@ -1,0 +1,4 @@
+﻿  ExamenParcialInventario.cpp
+C:\Users\ALUMNOS\Documents\PracticaCPP_Progra2\ExamenParcialInventario\ExamenParcialInventario\ExamenParcialInventario.cpp(39,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\ALUMNOS\Documents\PracticaCPP_Progra2\ExamenParcialInventario\ExamenParcialInventario\ExamenParcialInventario.cpp(23,9): warning C4101: 'nextItem': variable local sin referencia
+  ExamenParcialInventario.vcxproj -> C:\Users\ALUMNOS\Documents\PracticaCPP_Progra2\ExamenParcialInventario\Debug\ExamenParcialInventario.exe
